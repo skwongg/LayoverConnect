@@ -1,0 +1,45 @@
+<div class="total-page-container">
+  <div class="bgc-grey">
+    <div class="clearfix bgc-darkgrey">
+      <div class="m-w-400 center">
+        <%= image_tag('airplanel.png', :class => "left w-50 p-sm")%>
+        <%= image_tag('airplane.png', :class => "right w-50 p-sm")%>
+        <a href='/terminals' class="t-none"><h1 class="center t-center f-oswald p-xs">LayoverConnect</h1></a>
+      </div>
+    </div>
+
+    <!-- <form action="/terminals" method="POST" class="form_submit t-center fz-sm" id="terminal-form"> -->
+    <form action="" method="GET" class="form_submit t-center fz-sm" id="terminal-form">
+      <p class="m-b-sm f-futura">Where are you?</p>
+      <select class="myselect" name="terminal">
+        <option value='1'>Terminal 1</option>
+        <option value='2'>Terminal 2</option>
+        <option value='3'>Terminal 3</option>
+        <option value='4' selected>International Terminal</option>
+      </select>
+      <p class="m-b-sm f-futura">How long are you here for?</p>
+      <p class="m-b-xs">Start Time</p>
+      <input type="time" name="start_time" value="08:00:00"/>
+      <p class="m-b-xs">End Time</p>
+      <input type="time" name="end_time" value="12:00:00"/>
+      <input type="submit" class="sm-rect-button f-oswald d-b m-t-m center">
+    </form>
+     <div class="lebron" >
+      <div class="klay center">
+      </div>
+    </div>
+   <div>
+
+    <!-- <div id='firechat-wrapper'>
+      <a href='#' onclick='login("facebook");'>Chat</a>
+    </div> -->
+    <div id="firechat-wrapper"></div>
+
+
+
+
+  </div>
+    <%= image_tag('clouds.png', :class => "v-bottom w-full")%>
+    </div>
+</div>
+

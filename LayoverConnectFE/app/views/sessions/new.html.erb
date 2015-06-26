@@ -1,0 +1,36 @@
+<div class="total-page-container">
+
+  <div class="bgc-grey">
+    <div class="clearfix bgc-darkgrey">
+      <div class="m-w-400 center">
+        <%= image_tag('airplanel.png', :class => "left w-50 p-sm")%>
+        <%= image_tag('airplane.png', :class => "right w-50 p-sm")%>
+        <h1 class="center t-center f-oswald p-xs">LayoverConnect</h1>
+      </div>
+    </div>
+    <div class="m-w-500 center">
+      <h1 class='p-t-m fz-xs t-center f-futura'>LOG IN</h1>
+      <% if @error %>
+        <div class="t-center"><%= @error %></div>
+      <% end %>
+      <%= form_for(:session, url: login_path) do |f| %>
+        <div class="w-90 center">
+          <div class='d-b p-t-sm'><%= f.label :email, class: "f-oswald fz-xs"%></div>
+          <div class='d-b'><%= f.email_field :email, :class => 'rounded w-full' %></div>
+
+          <div class='d-b p-t-sm'><%= f.label :password, class: "f-oswald fz-xs" %></div>
+          <div class='d-b'><%= f.password_field :password, :class => 'rounded w-full' %></div>
+        <div class='p-t-sm t-center'>
+        <%= f.submit "LOG IN", class: "w-68 f-oswald sm-rect-button" %>
+        </div>
+      <% end %>
+
+      <%= link_to "#{image_tag('facebook-login-button.png', class: "w-220")}".html_safe, "/auth/Facebook", id: "fb-log-in", :class => 'p-t-m d-b t-center' %>
+      <div class="t-center">
+        <a href='/users/new' class="w-68 h-60">Sign Up as New User</a>
+      </div>
+    </div>
+  </div>
+    <%= image_tag('clouds.png', :class => "v-bottom w-full")%>
+</div>
+
