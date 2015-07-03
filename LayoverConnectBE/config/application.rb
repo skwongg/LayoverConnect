@@ -9,16 +9,15 @@ Bundler.require(*Rails.groups)
 module LayoverConnect
   class Application < Rails::Application
 
-
-    # config.middleware.use Rack::Cors do
-    #   allow do
-    #     origins '*'
-    #     resource '*',
-    #       :headers => :any,
-    #       :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-    #       :methods => [:get, :post, :options, :delete, :put]
-    #   end
-    # end
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*',
+          :headers => :any,
+          :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+          :methods => [:get, :post, :options, :delete, :put]
+      end
+    end
 
   # config.middleware.use config.session_store, config.session_options
   # config.middleware.use Rack::MethodOverride

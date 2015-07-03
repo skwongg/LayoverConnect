@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
   post 'users/appointment/:id' => 'users#appoint'
+  # get 'auth/:provider' => 'sessions#create'
+  get '/auth/:provider/callback', to: 'sessions#create'
+
+  # mount_devise_token_auth_for 'User', at: 'auth'
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
